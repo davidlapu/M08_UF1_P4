@@ -9,4 +9,8 @@ public class Character {
         this.waepon = waepon;
         this.element = element;
     }
+
+    public String getName() {
+        return name;
+    }
 }
