@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -47,20 +48,21 @@ public class ViewAdapter extends BaseAdapter {
             convertView = inflater.inflate(this.layout, null);
 
             holder = new ViewHolder();
-            //TODO
-            holder.textView = convertView.findViewById(R.id.listView);
+            holder.name = convertView.findViewById(R.id.textViewName);
+            holder.waepon = convertView.findViewById(R.id.imageViewWeapon);
+            holder.element = convertView.findViewById(R.id.imageViewElement);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Character character = (Character) getItem(position);
-        holder.textView.
+        String name = characters.get(position).getName();
 
-        return null;
+        return convertView;
     }
 
     static class ViewHolder {
-        private TextView textView;
+        private TextView name;
+        private ImageView waepon, element;
     }
 }

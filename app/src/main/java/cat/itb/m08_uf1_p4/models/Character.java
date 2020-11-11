@@ -13,4 +13,12 @@ public class Character {
     public String getName() {
         return name;
     }
+
+    public int getWaepon() {
+        return waepon;
+    }
+
+    public int getElement() {
+        return element;
+    }
 }
