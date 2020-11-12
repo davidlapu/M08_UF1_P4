@@ -11,14 +11,15 @@ import android.widget.TextView;
 import java.util.List;
 
 import cat.itb.m08_uf1_p4.R;
+import cat.itb.m08_uf1_p4.models.Character;
 
-public class ViewAdapter extends BaseAdapter {
+public class ListViewAdapter extends BaseAdapter {
 
     private Context context;
     private int layout;
     private List<Character> characters;
 
-    public ViewAdapter(Context context, int layout, List<Character> characters) {
+    public ListViewAdapter(Context context, int layout, List<Character> characters) {
         this.context = context;
         this.layout = layout;
         this.characters = characters;
@@ -56,7 +57,10 @@ public class ViewAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        String name = characters.get(position).getName();
+        Character character = (Character) getItem(position);
+        holder.name.setText(character.getName());
+        holder.waepon.setImageResource(character.getWaepon());
+        holder.element.setImageResource(character.getElement());
 
         return convertView;
     }

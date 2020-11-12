@@ -1,13 +1,18 @@
 package cat.itb.m08_uf1_p4.activities;
 
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.widget.ListView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.Toast;
-
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import cat.itb.m08_uf1_p4.R;
+import cat.itb.m08_uf1_p4.adapters.ListViewAdapter;
 import cat.itb.m08_uf1_p4.models.Character;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,10 +29,30 @@ public class MainActivity extends AppCompatActivity {
             new Character("Venti", R.drawable.catalyst, R.drawable.element_anemo),
             new Character("Xiangling", R.drawable.polearm, R.drawable.element_pyro)
     };
+
+    private final List<Character> characterList = new ArrayList<>(characters.length);
+    private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        listView = findViewById(R.id.listView);
+        characterList.addAll(Arrays.asList(characters));
+        setListViewAdapter();
     }
+
+    public void setListViewAdapter() {
+        ListViewAdapter listViewAdapter = new ListViewAdapter(this, R.layout.list_item, characterList);
+        listView.setAdapter(listViewAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.action_bar_menu, menu);
+        return true;
+    }
+
 }

@@ -4,21 +4,21 @@
 
     <item
         android:id="@+id/menuButtonPlus"
-        android:title="+"
+        android:title="@string/menu_plus_button"
         android:icon="@drawable/ic_baseline_add_circle_outline_24"
         app:showAsAction="ifRoom"
         />
 
     <item
         android:id="@+id/listViewButton"
-        android:title="test"
+        android:title="@string/menu_list"
         android:icon="@drawable/ic_baseline_menu_24"
         android:visible="false"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/gridViewButton"
-        android:title="test"
+        android:title="@string/menu_grid"
         android:icon="@drawable/ic_baseline_apps_24"
         app:showAsAction="ifRoom"/>
 
