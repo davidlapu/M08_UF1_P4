@@ -13,13 +13,13 @@ import java.util.List;
 import cat.itb.m08_uf1_p4.R;
 import cat.itb.m08_uf1_p4.models.Character;
 
-public class ListViewAdapter extends BaseAdapter {
+public class ViewAdapter extends BaseAdapter {
 
     private Context context;
     private int layout;
     private List<Character> characters;
 
-    public ListViewAdapter(Context context, int layout, List<Character> characters) {
+    public ViewAdapter(Context context, int layout, List<Character> characters) {
         this.context = context;
         this.layout = layout;
         this.characters = characters;

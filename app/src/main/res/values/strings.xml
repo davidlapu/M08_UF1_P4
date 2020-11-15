@@ -3,4 +3,25 @@
     <string name="menu_plus_button">Add character</string>
     <string name="menu_grid">Grid view mode</string>
     <string name="menu_list">List view mode</string>
+    <string name="new_character">New character</string>
+    <string name="name">Name…</string>
+    <string name="done">Done</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string-array name="waepons">
+        <item>Bow</item>
+        <item>Catalyst</item>
+        <item>Claymore</item>
+        <item>Polearm</item>
+        <item>Sword</item>
+    </string-array>
+    <string-array name="elements">
+        <item>Anemo</item>
+        <item>Cryo</item>
+        <item>Electro</item>
+        <item>Dendro</item>
+        <item>Geo</item>
+        <item>Hydro</item>
+        <item>Pyro</item>
+    </string-array>
 </resources>
